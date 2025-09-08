@@ -1,8 +1,26 @@
-canvas{
+canvas {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #00000033;
+    background: radial-gradient(circle at center, #1a001f, #000); /* fundo romântico */
+}
+
+/* Texto no centro */
+.love-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Cursive", sans-serif;
+    font-size: 3em;
+    color: #ff3366;
+    text-shadow: 0 0 20px #ff99cc, 0 0 40px #ff0066;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
 }
